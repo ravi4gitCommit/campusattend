@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 
 import { Sidebar } from './Sidebar'
+import { Topbar } from './Topbar'
 
 import './styles/app-layout.css'
 
@@ -10,6 +11,8 @@ export function AppLayout() {
       <Sidebar />
 
       <div className="app-layout__main">
+        <Topbar />
+
         <main className="app-layout__content">
           <Outlet />
         </main>
