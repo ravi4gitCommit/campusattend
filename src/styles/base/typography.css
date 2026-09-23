@@ -1,0 +1,37 @@
+/* Document-level type defaults. Component type scales live with the component. */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--text-2xl);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-md);
+}
+
+p {
+  line-height: var(--leading-normal);
+}
+
+small {
+  font-size: var(--text-xs);
+}
+
+code,
+kbd,
+pre {
+  font-family: var(--font-mono);
+}

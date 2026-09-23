@@ -1,0 +1,81 @@
+/* Minimal, predictable reset. No global transitions — they are applied per
+ * component so that theme switching stays cheap and animations stay intentional. */
+
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ * {
+   margin: 0;
+ }
+ 
+ html {
+   min-height: 100%;
+   -webkit-text-size-adjust: 100%;
+ }
+ 
+ body {
+   min-height: 100vh;
+   background-color: var(--color-bg);
+   color: var(--color-text);
+   font-family: var(--font-sans);
+   font-size: var(--text-base);
+   line-height: var(--leading-normal);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ img,
+ picture,
+ svg,
+ video {
+   display: block;
+   max-width: 100%;
+ }
+ 
+ input,
+ button,
+ select,
+ textarea {
+   font: inherit;
+   color: inherit;
+ }
+ 
+ button {
+   cursor: pointer;
+ }
+ 
+ ul,
+ ol {
+   list-style: none;
+   padding: 0;
+ }
+ 
+ a {
+   color: inherit;
+   text-decoration: none;
+ }
+ 
+ table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ :focus-visible {
+   outline: 2px solid var(--color-focus-ring);
+   outline-offset: 2px;
+   border-radius: var(--radius-xs);
+ }
+ 
+ @media (prefers-reduced-motion: reduce) {
+   *,
+   *::before,
+   *::after {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }

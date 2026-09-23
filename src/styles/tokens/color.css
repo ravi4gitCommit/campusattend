@@ -1,0 +1,89 @@
+/* -----------------------------------------------------------------------------
+ * Colour tokens — the single source of truth for every colour in the app.
+ * Light values live on :root, dark values are swapped on [data-theme='dark'].
+ * Components must never hard-code a hex value; always reference a token.
+ * -------------------------------------------------------------------------- */
+
+ :root,
+ :root[data-theme='light'] {
+   color-scheme: light;
+ 
+   /* Brand */
+   --color-primary: #1d61e8;
+   --color-primary-hover: #174fc5;
+   --color-primary-soft: #eff4fe;
+   --color-on-primary: #ffffff;
+ 
+   /* Status */
+   --color-success: #10b981;
+   --color-success-soft: #d1fae5;
+   --color-warning: #f59e0b;
+   --color-warning-soft: #fef3c7;
+   --color-danger: #ef4444;
+   --color-danger-soft: #fee2e2;
+   --color-accent: #8b5cf6;
+   --color-accent-soft: #f5f3ff;
+ 
+   /* Surfaces */
+   --color-bg: #f4f6fc;
+   --color-surface: #ffffff;
+   --color-surface-subtle: #f4f6fc;
+   --color-topbar: #ffffff;
+ 
+   /* Text */
+   --color-text: #0f172a;
+   --color-text-secondary: #64748b;
+   --color-text-muted: #94a3b8;
+ 
+   /* Lines */
+   --color-border: #e2e8f0;
+   --color-border-strong: #cbd5e1;
+   --color-focus-ring: rgba(29, 97, 232, 0.45);
+ 
+   /* Sidebar — intentionally dark in both themes */
+   --color-sidebar: #0b192c;
+   --color-sidebar-text: #94a3b8;
+   --color-sidebar-text-strong: #ffffff;
+   --color-sidebar-hover: #152438;
+   --color-sidebar-active: #1d61e8;
+   --color-sidebar-border: rgba(255, 255, 255, 0.08);
+   --color-sidebar-avatar: #334155;
+ }
+ 
+ :root[data-theme='dark'] {
+   color-scheme: dark;
+ 
+   --color-primary: #3b82f6;
+   --color-primary-hover: #2563eb;
+   --color-primary-soft: rgba(59, 130, 246, 0.15);
+   --color-on-primary: #ffffff;
+ 
+   --color-success: #34d399;
+   --color-success-soft: rgba(16, 185, 129, 0.15);
+   --color-warning: #fbbf24;
+   --color-warning-soft: rgba(245, 158, 11, 0.15);
+   --color-danger: #f87171;
+   --color-danger-soft: rgba(239, 68, 68, 0.15);
+   --color-accent: #a78bfa;
+   --color-accent-soft: rgba(139, 92, 246, 0.15);
+ 
+   --color-bg: #090d16;
+   --color-surface: #111827;
+   --color-surface-subtle: #090d16;
+   --color-topbar: #111827;
+ 
+   --color-text: #f9fafb;
+   --color-text-secondary: #9ca3af;
+   --color-text-muted: #6b7280;
+ 
+   --color-border: #1f2937;
+   --color-border-strong: #374151;
+   --color-focus-ring: rgba(59, 130, 246, 0.55);
+ 
+   --color-sidebar: #030712;
+   --color-sidebar-text: #9ca3af;
+   --color-sidebar-hover: #111827;
+   --color-sidebar-active: #2563eb;
+   --color-sidebar-border: rgba(255, 255, 255, 0.06);
+   --color-sidebar-avatar: #1f2937;
+ }

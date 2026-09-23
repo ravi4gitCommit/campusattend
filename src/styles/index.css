@@ -1,0 +1,19 @@
+/* -----------------------------------------------------------------------------
+ * Global stylesheet entry point — imported once, in src/main.tsx.
+ *
+ * Import order matters:
+ *   1. tokens  — custom properties only, no selectors that paint
+ *   2. base    — reset and element defaults built on those tokens
+ *
+ * Component and feature styles are NOT imported here. They live next to the
+ * component that owns them and are imported by that component's module.
+ * -------------------------------------------------------------------------- */
+
+ @import './tokens/color.css';
+ @import './tokens/typography.css';
+ @import './tokens/layout.css';
+ @import './tokens/elevation.css';
+ 
+ @import './base/reset.css';
+ @import './base/typography.css';
+ @import './base/utilities.css';
