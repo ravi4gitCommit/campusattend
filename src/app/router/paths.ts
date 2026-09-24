@@ -6,6 +6,7 @@ export const ROUTE_PATHS = {
     login: '/login',
     dashboard: '/',
     attendance: '/attendance',
+    students: '/students',
   } as const
   
   export type RoutePath = (typeof ROUTE_PATHS)[keyof typeof ROUTE_PATHS]

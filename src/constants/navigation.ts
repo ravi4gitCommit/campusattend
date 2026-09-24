@@ -8,4 +8,5 @@ export interface NavigationItem {
 export const PRIMARY_NAVIGATION: NavigationItem[] = [
   { label: 'Dashboard', path: ROUTE_PATHS.dashboard },
   { label: 'Attendance', path: ROUTE_PATHS.attendance },
+  { label: 'Students', path: ROUTE_PATHS.students },
 ]
